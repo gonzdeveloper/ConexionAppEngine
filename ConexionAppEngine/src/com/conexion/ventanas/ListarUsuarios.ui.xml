@@ -1,0 +1,23 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	/* stock list flex table */
+	.watchList {
+		border: 1px solid silver;
+		padding: 2px;
+		margin-bottom: 6px;
+	}
+	</ui:style>
+	<g:HTMLPanel width="800px">
+			<g:VerticalPanel width="100%" height="100%">
+				<g:HorizontalPanel spacing="6">
+					<g:Button ui:field="addButton">Agregar</g:Button>
+					<g:Button ui:field="modifyButton">Modificar</g:Button>
+					<g:Button ui:field="deleteButton">Eliminar</g:Button>
+				</g:HorizontalPanel>
+				<g:DialogBox ui:field="dialogBox"></g:DialogBox>
+				<g:FlexTable ui:field="contactsTable" addStyleNames="{style.watchList}" width="100%" />
+			</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

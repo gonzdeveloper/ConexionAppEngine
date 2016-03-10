@@ -1,0 +1,103 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	#menuv {
+		width: 150px;
+		color: rgb(40, 149, 241);
+		font-size: 13px;
+	}
+	
+	#menuv ul, li {
+		list-style-type: none;
+		list-style-position: outside;
+	}
+	
+	#menuv ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+	#menuv span {
+		display: inline-block;
+		height: 15px;
+	}
+	
+	#menuv sprite-div {
+		vertical-align: top;
+	}
+	
+	#menuv a {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 5px 7px 5px 2px;
+		text-decoration: none;
+		color: rgb(40, 149, 241);
+		font-weight: normal;
+		font-size: 13px;
+		width: 138px;
+		font-family: " Open Sans ", " lucida grande ", " Segoe UI ", arial,
+			verdana, " lucida sans unicode ", tahoma, sans-serif;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<div id="menuv">
+			<ul>
+				<li>
+					<a href="#menuv">
+						<span>
+							<div class="sprite-div">
+								<g:Label ui:field="lblViajes">Viajes</g:Label>
+							</div>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#menuv">
+						<span>
+							<div class="sprite-div">
+								<g:Label ui:field="lblInfPro">Infrome proveedores</g:Label>
+							</div>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#menuv">
+						<span>
+							<div class="sprite-div">
+								<g:Label ui:field="lblInfClientes">Infrome deudores</g:Label>
+							</div>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#menuv">
+						<span>
+							<div class="sprite-div">
+								<g:Label ui:field="lblCCEmpresas">Empresas propias</g:Label>
+							</div>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#menuv">
+						<span>
+							<div class="sprite-div">
+								<g:Label ui:field="lblEmpresas">Empresas</g:Label>
+							</div>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#menuv">
+						<span>
+							<div class="sprite-div">
+								<g:Label ui:field="lblUsuarios">Usuarios</g:Label>
+							</div>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel width="250px">
+		<g:VerticalPanel width="250px">
+			<g:Label ui:field="lblMje"/>
+			<g:TextBox width="240px" ui:field="tbMonto"></g:TextBox>
+			<g:Button width="250px" ui:field="btnAceptar">Aceptar</g:Button>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

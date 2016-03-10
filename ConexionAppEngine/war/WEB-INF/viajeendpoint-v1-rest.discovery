@@ -1,0 +1,463 @@
+{
+ "kind": "discovery#restDescription",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/8jDqUJoF7ESi_FoknmLjcXcPE6g\"",
+ "discoveryVersion": "v1",
+ "id": "viajeendpoint:v1",
+ "name": "viajeendpoint",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "conexion.com",
+ "ownerName": "conexion.com",
+ "packagePath": "entidades",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rest",
+ "baseUrl": "https://fletemadera.appspot.com/_ah/api/viajeendpoint/v1/",
+ "basePath": "/_ah/api/viajeendpoint/v1/",
+ "rootUrl": "https://fletemadera.appspot.com/_ah/api/",
+ "servicePath": "viajeendpoint/v1/",
+ "batchPath": "batch",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "CollectionResponse_Viaje": {
+   "id": "CollectionResponse_Viaje",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Viaje"
+     }
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Viaje": {
+   "id": "Viaje",
+   "type": "object",
+   "properties": {
+    "cliente": {
+     "type": "string"
+    },
+    "facturado": {
+     "type": "string"
+    },
+    "fecha": {
+     "type": "string"
+    },
+    "fechaDeCarga": {
+     "type": "string"
+    },
+    "fechaDeDescarga": {
+     "type": "string"
+    },
+    "fechaPagar_origen": {
+     "type": "string"
+    },
+    "fechaPago_flete": {
+     "type": "string"
+    },
+    "fecha_pago_descargador": {
+     "type": "string"
+    },
+    "fletero": {
+     "type": "string",
+     "format": "int64"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "kilos": {
+     "type": "number",
+     "format": "float"
+    },
+    "kilosOrigenReales": {
+     "type": "string"
+    },
+    "monto_descargador": {
+     "type": "string"
+    },
+    "nombre_descargador": {
+     "type": "string"
+    },
+    "observaciones": {
+     "type": "string"
+    },
+    "pago": {
+     "type": "string"
+    },
+    "pago_descargador": {
+     "type": "string"
+    },
+    "pago_descargados": {
+     "type": "string"
+    },
+    "pago_flete": {
+     "type": "string"
+    },
+    "pendienteCarga": {
+     "type": "boolean"
+    },
+    "pendienteDeCobro": {
+     "type": "boolean"
+    },
+    "pendienteDeDescarga": {
+     "type": "boolean"
+    },
+    "pendienteDePago": {
+     "type": "boolean"
+    },
+    "precioXtonelada_flete": {
+     "type": "string"
+    },
+    "precio_kilo": {
+     "type": "number",
+     "format": "float"
+    },
+    "proveedor": {
+     "type": "string"
+    },
+    "saldo_descargador": {
+     "type": "string"
+    },
+    "tipoCarga": {
+     "type": "string"
+    },
+    "usuarioResponsable": {
+     "type": "string",
+     "format": "int64"
+    }
+   }
+  },
+  "ViajeCollection": {
+   "id": "ViajeCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Viaje"
+     }
+    }
+   }
+  }
+ },
+ "methods": {
+  "getViaje": {
+   "id": "viajeendpoint.getViaje",
+   "path": "viaje/{id}",
+   "httpMethod": "GET",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "response": {
+    "$ref": "Viaje"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "insertViaje": {
+   "id": "viajeendpoint.insertViaje",
+   "path": "viaje",
+   "httpMethod": "POST",
+   "request": {
+    "$ref": "Viaje",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "Viaje"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "listViaje": {
+   "id": "viajeendpoint.listViaje",
+   "path": "viaje",
+   "httpMethod": "GET",
+   "parameters": {
+    "cursor": {
+     "type": "string",
+     "location": "query"
+    },
+    "limit": {
+     "type": "integer",
+     "format": "int32",
+     "location": "query"
+    }
+   },
+   "response": {
+    "$ref": "CollectionResponse_Viaje"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "modificarFechaDePagoMontoCuentaCorrienteDESTINO": {
+   "id": "viajeendpoint.modificarFechaDePagoMontoCuentaCorrienteDESTINO",
+   "path": "modificarFechaDePagoMontoCuentaCorrienteDESTINO/{id}/{fechaPagar_flete}/{pago_flete}",
+   "httpMethod": "POST",
+   "parameters": {
+    "fechaPagar_flete": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    },
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    },
+    "pago_flete": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id",
+    "fechaPagar_flete",
+    "pago_flete"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "modificarFechaDePagoMontoCuentaCorrienteORIGEN": {
+   "id": "viajeendpoint.modificarFechaDePagoMontoCuentaCorrienteORIGEN",
+   "path": "modificarFechaDePagoMontoCuentaCorrienteORIGEN/{id}/{fechaPagar_origen}/{pago}/{kilosOrigenReales}",
+   "httpMethod": "POST",
+   "parameters": {
+    "fechaPagar_origen": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    },
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    },
+    "kilosOrigenReales": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    },
+    "pago": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id",
+    "fechaPagar_origen",
+    "pago",
+    "kilosOrigenReales"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "obtenerMaxId": {
+   "id": "viajeendpoint.obtenerMaxId",
+   "path": "obtenerMaxId",
+   "httpMethod": "POST",
+   "response": {
+    "$ref": "Viaje"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "obtenerViajesCargaPendiente": {
+   "id": "viajeendpoint.obtenerViajesCargaPendiente",
+   "path": "obtenerViajesCargaPendiente",
+   "httpMethod": "POST",
+   "response": {
+    "$ref": "ViajeCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "obtenerViajesDescargaPendiente": {
+   "id": "viajeendpoint.obtenerViajesDescargaPendiente",
+   "path": "obtenerViajesDescargaPendiente",
+   "httpMethod": "POST",
+   "response": {
+    "$ref": "ViajeCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "obtenerViajesPendientesDeCobros": {
+   "id": "viajeendpoint.obtenerViajesPendientesDeCobros",
+   "path": "obtenerViajesPendientesDeCobros/{cliente}",
+   "httpMethod": "POST",
+   "parameters": {
+    "cliente": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "cliente"
+   ],
+   "response": {
+    "$ref": "ViajeCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "obtenerViajesPendientesDePago": {
+   "id": "viajeendpoint.obtenerViajesPendientesDePago",
+   "path": "obtenerViajesPendientesDePago/{proveedor}",
+   "httpMethod": "POST",
+   "parameters": {
+    "proveedor": {
+     "type": "string",
+     "required": true,
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "proveedor"
+   ],
+   "response": {
+    "$ref": "ViajeCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "obtenerViajesPorFletero": {
+   "id": "viajeendpoint.obtenerViajesPorFletero",
+   "path": "obtenerViajesPorFletero/{id}",
+   "httpMethod": "POST",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "response": {
+    "$ref": "ViajeCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "removeViaje": {
+   "id": "viajeendpoint.removeViaje",
+   "path": "viaje/{id}",
+   "httpMethod": "DELETE",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "updateViaje": {
+   "id": "viajeendpoint.updateViaje",
+   "path": "viaje",
+   "httpMethod": "PUT",
+   "request": {
+    "$ref": "Viaje",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "Viaje"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}

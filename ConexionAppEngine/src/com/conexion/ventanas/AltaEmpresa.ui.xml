@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel width="250px">
+		<g:VerticalPanel width="250px">
+			<g:Label text="Nombre" width="240px" />
+			<g:TextBox ui:field="tbNombreEmpresa" width="240px" />
+			<g:Label text="Tipo" width="100%" />
+			<g:ListBox ui:field="lbTipo" selectedIndex="0" width="100%"
+				height="32">
+				<g:item value='0'>
+					Proveedor
+				</g:item>
+				<g:item value='1'>
+					Cliente
+				</g:item>
+				<g:item value='2'>
+					Empresa propia
+				</g:item>
+			</g:ListBox>
+			<g:Label text="Direccion" width="100%" />
+			<g:TextBox ui:field="tbDireccionEmpresa" width="240px" />
+			<g:Label text="Saldo inicial" width="100%" />
+			<g:TextBox ui:field="tbCCEmpresa" width="240px" />
+			<g:Button ui:field="btnAceptar" width="100%">Aceptar</g:Button>
+			<g:Button ui:field="btnModificar" width="100%">Modificar</g:Button>
+			<g:Label ui:field="errorLabel" width="100%"></g:Label>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

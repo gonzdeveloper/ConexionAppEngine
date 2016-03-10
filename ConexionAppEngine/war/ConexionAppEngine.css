@@ -1,0 +1,86 @@
+/** Add css rules here for your application. */
+/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 40px;
+	color: rgb(40, 149, 241);
+	font-weight: normal;
+	font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana,
+		"lucida sans unicode", tahoma, sans-serif;
+}
+
+.resaltarLabel {
+	color: rgb(40, 149, 241);
+}
+
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+#contenedor {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#cabezal {
+	width: 980px;
+	margin: 0 auto;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+#espacio {
+	width: 980px;
+	height: 25px;
+	margin: 0 auto;
+}
+
+.watchListHeader {
+	background-color: rgb(40, 149, 241);
+	color: white;
+	font-weight: bold;
+}
+
+.filaViajeFacturado {
+	background-color: rgb(255, 153, 51);
+}
+
+.filaNormal {
+	background-color: white;
+}
+
+.filaCargada {
+	background-color: rgb(250, 250, 50);
+}
+
+.filaCargadaPaga {
+	background-color: rgb(50, 250, 50);
+}
+
+.filaDescargada {
+	background-color: rgb(250, 50, 50);
+}
+
+.filaDescargarCobrar {
+	background-color: rgb(250, 50, 250);
+}
+
+cText {
+	font-size: 25px;
+	color: rgb(61, 70, 77);
+	font-weight: normal;
+	font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana,
+		"lucida sans unicode", tahoma, sans-serif;
+}
